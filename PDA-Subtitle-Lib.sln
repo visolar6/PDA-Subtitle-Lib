@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDASubtitleLib", "PDASubtitleLib\PDASubtitleLib.csproj", "{944CBD26-C249-7BEA-85F5-4B9D284FBE1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{944CBD26-C249-7BEA-85F5-4B9D284FBE1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{944CBD26-C249-7BEA-85F5-4B9D284FBE1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{944CBD26-C249-7BEA-85F5-4B9D284FBE1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{944CBD26-C249-7BEA-85F5-4B9D284FBE1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E329CCE6-8A72-41F6-ACA6-62CB912EFC0C}
+	EndGlobalSection
+EndGlobal

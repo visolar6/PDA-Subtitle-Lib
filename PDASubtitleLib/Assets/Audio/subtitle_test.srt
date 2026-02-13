@@ -1,0 +1,32 @@
+1
+00:00:00,099 --> 00:00:03,019
+This is a subtitle synchronization test.
+
+2
+00:00:04,079 --> 00:00:08,119
+Each sentence is spaced to verify timing accuracy.
+
+3
+00:00:09,479 --> 00:00:14,1000
+Short lines should appear briefly. Longer lines should remain on screen long enough
+
+4
+00:00:15,000 --> 00:00:17,700
+to read comfortably without rushing the viewer.
+
+5
+00:00:19,100 --> 00:00:24,599
+This line includes a natural mid-sentence
+break, allowing you to test multi-line
+
+6
+00:00:24,600 --> 00:00:26,920
+subtitle wrapping and formatting.
+
+7
+00:00:28,280 --> 00:00:33,200
+Numbers test: one, two, three, four.
+
+8
+00:00:33,479 --> 00:00:36,799
+Final line. End of subtitle test.

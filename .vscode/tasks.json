@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Blacksite",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "Blacksite/Blacksite.csproj",
+                "-c",
+                "Release"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "detail": "Builds the BepInEx plugin and copies it to the Subnautica BepInEx/plugins folder"
+        }
+    ]
+}
