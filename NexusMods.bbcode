@@ -1,0 +1,61 @@
+[size=5][b]PDA Subtitle Library[/b][/size]
+
+A developer library for Subnautica modders to add synchronized subtitles to PDA audio logs using standard [b].srt[/b] files. Built for BepInEx and Nautilus, this library enables accessibility and localization for custom PDA content.
+
+[b]Features[/b]
+[list]
+[*] Industry-standard .srt subtitle support
+[*] Automatic timing and display in sync with audio
+[*] Simple API for registering subtitles and PDA log entries
+[*] Non-intrusive Harmony patches
+[/list]
+
+[b]Getting Started[/b]
+[list=1]
+[*] Add the compiled PDASubtitleLib.dll to your mod project or as a dependency
+[*] Place your .srt subtitle files in a folder (e.g., Assets/Audio)
+[*] The only requirement is that the [b]key[/b] you use when adding PDA log entries matches the .srt filename (without extension). Audio files do not need to be named the same or placed in the same folder as the .srt files; you can load audio however you wish.
+[/list]
+
+[b]Quick Example[/b]
+[code]
+// At mod startup (e.g., in your Plugin.Start method):
+SubtitlesHandler.Register(Path.Combine(Paths.PluginPath, "YourMod", "Assets", "Audio"));
+// This will register all of your .srt files for later lookup
+
+// Register PDA Log Entry
+PDAHandler.AddLogEntry(
+    key, // e.g., "log1" (must match .srt filename without extension)
+    SubtitlesHandler.GetLanguageKey(key), // IMPORTANT: Always use GetLanguageKey(key) here!
+    audioPath // this is just one way of adding audio using PDAHandler.AddLogEntry, there's many more and PDASubtitleLib will work regardless of how you load the audio into the log entry
+);
+// NOTE: If you do not use SubtitlesHandler.GetLanguageKey(key), the PDA log entry will not show the actual text of the .srt file.
+
+// Trigger PDA Log Playback
+SubtitlesHandler.PDALogAdd(key); // Adds the log and starts audio + subtitle playback
+[/code]
+
+[b]Subtitle File Format[/b]
+[list]
+[*] Use standard .srt format
+[*] Each .srt file's name (without extension) is the [b]key[/b] for that log entry
+[/list]
+
+[b]API Reference[/b]
+[list]
+[*] SubtitlesHandler.Register(string folderPath)
+[*] SubtitlesHandler.GetLanguageKey(string key)
+[*] SubtitlesHandler.PDALogAdd(string key)
+[/list]
+
+[b]Requirements[/b]
+[list]
+[*] BepInEx
+[*] Nautilus
+[/list]
+
+[b]Links[/b]
+[url=https://github.com/visolar6/PDA-Subtitle-Lib]GitHub Repository[/url]
+
+[b]License[/b]
+See LICENSE file for details.
